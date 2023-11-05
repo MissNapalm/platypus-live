@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Platypus Live Download</title>
+    <style>
+        body {
+            background-color: #0077b6;
+            color: #f2f2f2;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        select, button {
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        select {
+            width: 200px;
+        }
+
+        button {
+            background-color: #00a896;
+            color: #f2f2f2;
+            border: none;
+            cursor: pointer;
+        }
+
+        .quote-box {
+            background-color: #005a8d;
+            color: #f2f2f2;
+            padding: 10px;
+            border: 2px solid #00a896;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .customer-quote {
+            font-size: 16px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Platypus Live</h1>
+    <p>A software product so great, you'll wish it existed.</p>
+
+    <p>Choose your operating system to download Platypus Live now!</p>
+
+    <form id="download-form" action="#">
+        <select id="os-select">
+            <option value="windows">Windows .exe</option>
+            <option value="linux">Linux .deb</option>
+            <option value="osx">OSX .dmg</option>
+        </select>
+        <button type="button" id="download-button">Go</button>
+    </form>
+
+    <div class="quote-box">
+        <p>What our customers are saying about Platypus Live:</p>
+        <p class="customer-quote">"I don't know what that is. Why are you talking to me?"</p>
+        <p class="customer-quote">"I prefer non-aquatic animal software, actually."</p>
+        <p class="customer-quote">"Can you spare some change?"</p>
+    </div>
+
+    <script>
+        const downloadButton = document.getElementById("download-button");
+        const osSelect = document.getElementById("os-select");
+
+        downloadButton.addEventListener("click", function() {
+            const selectedOS = osSelect.value;
+            let downloadURL;
+
+            if (selectedOS === "windows") {
+                downloadURL = "platypus-live-windows.exe";
+            } else if (selectedOS === "linux") {
+                downloadURL = "platypus-live-linux.deb";
+            } else if (selectedOS === "osx") {
+                downloadURL = "platypus-live-osx.dmg";
+            }
+
+            // Simulate a download by navigating to the file URL
+            window.location.href = downloadURL;
+        });
+    </script>
+</body>
+</html>
